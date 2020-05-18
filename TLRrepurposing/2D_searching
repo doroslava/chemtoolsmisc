@@ -1,0 +1,78 @@
+from rdkit import Chem
+from rdkit.Chem.rdMolDescriptors import GetMorganFingerprint
+from rdkit import DataStructs
+from rdkit.SimDivFilters.rdSimDivPickers import MaxMinPicker
+import pandas
+
+
+
+#functions for reading Smiles file and getting the IDs
+def getSmiles(file,delimiter="\t"):
+    smiles=[]
+    with open(file) as f:
+        for line in f:
+            smiles.append(line.split(delimiter)[0])
+    return(smiles)
+
+def getIDs(file,delimiter="\t"):
+    IDs=[]
+    with open(file) as f:
+        for line in f:
+            IDs.append(line.split(delimiter)[1].split("\n")[0])
+    return(IDs)
+
+
+#rdkit diversity picker
+
+modulatorSmiSet = getSmiles('/home/dsribar/Documents/tlr8/Repurposing/crystal_structures.smi')
+modulatorIDs = getIDs('/home/dsribar/Documents/tlr8/Repurposing/crystal_structures.smi')
+modulatorSet = [Chem.MolFromSmiles(x) for x in modulatorSmiSet]
+fps= [GetMorganFingerprint(x,3) for x in modulatorSet]
+
+#nfps=len(fps)
+
+#def distij(i,j,fps=fps):
+#    return 1-DataStructs.TanimotoSimilarity(fps[i],fps[j])
+
+#picker = MaxMinPicker()
+#pickIndices = list(picker.LazyPick(distij,nfps,3,seed=23))
+
+#molecules=[modulatorIDs[x] for x in pickIndices]
+
+#print "Number of molecules in the modulator set : ", nfps
+
+#print "Most diverse molecules are : ", molecules, "with indices ", pickIndices
+
+#Creating molecules and fingerprints for the library
+librarySet = [x for x in Chem.SDMolSupplier('/mdspace/dora/TLR8/Old_data/Repurposing/Drug_bank/structures.sdf')]
+while librarySet.count(None): librarySet.remove(None)
+fps2 = [GetMorganFingerprint(x,3) for x in librarySet]
+nfps2 = len(fps2)
+print "Number of molecules in library set: ", nfps2
+
+
+#Similiarity searching
+
+drugbankDataFrame = pandas.read_csv("/home/dsribar/Documents/tlr8/Repurposing/drug_target.csv")
+
+name = [x.GetProp("GENERIC_NAME") for x in librarySet]
+drugbankID = [x.GetProp("DRUGBANK_ID") for x in librarySet]
+group = [x.GetProp("DRUG_GROUPS") for x in librarySet]
+smiles = [x.GetProp("SMILES") for x in librarySet]
+
+for i in range(0,len(fps)):
+    queryMolecule = modulatorIDs[i]
+    similiarity=[]
+    for x in range(0,len(fps2)):
+        similiarity.append(DataStructs.TanimotoSimilarity(fps[i],fps2[x]))
+    similiarityDataFrame = pandas.DataFrame(
+        {'Generic Name': name,
+        'DrugBank ID': drugbankID,
+        'Drug group': group,
+        'Tanimoto similiarity': similiarity,
+         'Smiles': smiles})
+    finalDataFrame = pandas.merge(similiarityDataFrame,drugbankDataFrame,on="DrugBank ID")
+    finalDataFrameTopHits = finalDataFrame.sort_values(by="Tanimoto similiarity",ascending=False)
+    finalDataFrameTopHits = finalDataFrameTopHits[["DrugBank ID","Generic Name","Tanimoto similiarity","Drug group","UniProt Name","Smiles"]]
+    finalDataFrameTopHits.to_csv("/home/dsribar/Documents/tlr8/Repurposing/2D_hits/"+queryMolecule+".csv",index=False)
+
