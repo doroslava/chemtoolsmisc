@@ -1,0 +1,119 @@
+{
+  "build": "py36h4e8e208_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "cairo >=1.16.0,<1.17.0a0",
+    "python >=3.6,<3.7.0a0",
+    "python_abi 3.6.* *_cp36m",
+    "vc >=14,<15.0a0"
+  ],
+  "extracted_package_dir": "C:\\Users\\dora\\Anaconda3\\pkgs\\pycairo-1.19.1-py36h4e8e208_3",
+  "features": "",
+  "files": [
+    "Lib/site-packages/cairo/__init__.py",
+    "Lib/site-packages/cairo/__init__.pyi",
+    "Lib/site-packages/cairo/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/cairo/_cairo.lib",
+    "Lib/site-packages/cairo/_cairo.pyd",
+    "Lib/site-packages/cairo/include/py3cairo.h",
+    "Lib/site-packages/cairo/py.typed",
+    "Lib/site-packages/pycairo-1.19.1.egg-info",
+    "Library/include/pycairo/py3cairo.h",
+    "Library/lib/pkgconfig/py3cairo.pc",
+    ".nonadmin"
+  ],
+  "fn": "pycairo-1.19.1-py36h4e8e208_3.tar.bz2",
+  "license": "LGPL-2.1-only OR MPL-1.1",
+  "link": {
+    "source": "C:\\Users\\dora\\Anaconda3\\pkgs\\pycairo-1.19.1-py36h4e8e208_3",
+    "type": 1
+  },
+  "md5": "9c8b709c2a9c2e0ed11bd5cc9838c0b1",
+  "name": "pycairo",
+  "package_tarball_full_path": "C:\\Users\\dora\\Anaconda3\\pkgs\\pycairo-1.19.1-py36h4e8e208_3.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/cairo/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5c81ff76ff32f215f157da4f0fb44eef466d7dcc4ff7924ccdcfc19f1bfbf134",
+        "sha256_in_prefix": "5c81ff76ff32f215f157da4f0fb44eef466d7dcc4ff7924ccdcfc19f1bfbf134",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "Lib/site-packages/cairo/__init__.pyi",
+        "path_type": "hardlink",
+        "sha256": "c2bcf6325e9780ca111fcb10c6d17ac8e4a03f82377ba12a17d14ecc41907f62",
+        "sha256_in_prefix": "c2bcf6325e9780ca111fcb10c6d17ac8e4a03f82377ba12a17d14ecc41907f62",
+        "size_in_bytes": 33334
+      },
+      {
+        "_path": "Lib/site-packages/cairo/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "hardlink",
+        "sha256": "d2ebafdb0335ac18330057c12396a5b2c091ebc68f64c29e186709ae19b0f862",
+        "sha256_in_prefix": "d2ebafdb0335ac18330057c12396a5b2c091ebc68f64c29e186709ae19b0f862",
+        "size_in_bytes": 714
+      },
+      {
+        "_path": "Lib/site-packages/cairo/_cairo.lib",
+        "path_type": "hardlink",
+        "sha256": "4a5f9787967a5fc8151f596665f90840904e141959d8917596b25bc0d9d2b65c",
+        "sha256_in_prefix": "4a5f9787967a5fc8151f596665f90840904e141959d8917596b25bc0d9d2b65c",
+        "size_in_bytes": 1716
+      },
+      {
+        "_path": "Lib/site-packages/cairo/_cairo.pyd",
+        "path_type": "hardlink",
+        "sha256": "c12ec2a667fb020c404660baf908fcd5ae051f6025da22e95ec0e9dd7228bfd4",
+        "sha256_in_prefix": "c12ec2a667fb020c404660baf908fcd5ae051f6025da22e95ec0e9dd7228bfd4",
+        "size_in_bytes": 168448
+      },
+      {
+        "_path": "Lib/site-packages/cairo/include/py3cairo.h",
+        "path_type": "hardlink",
+        "sha256": "acd39c610e5ef16e88430705215546334e1ae64011a00c38ee9c61d7e1d31770",
+        "sha256_in_prefix": "acd39c610e5ef16e88430705215546334e1ae64011a00c38ee9c61d7e1d31770",
+        "size_in_bytes": 9152
+      },
+      {
+        "_path": "Lib/site-packages/cairo/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/pycairo-1.19.1.egg-info",
+        "path_type": "hardlink",
+        "sha256": "ceef36fdd9fabe2e99f895e289af22198ad0dbec2ee3461477521bd69660b13a",
+        "sha256_in_prefix": "ceef36fdd9fabe2e99f895e289af22198ad0dbec2ee3461477521bd69660b13a",
+        "size_in_bytes": 1024
+      },
+      {
+        "_path": "Library/include/pycairo/py3cairo.h",
+        "path_type": "hardlink",
+        "sha256": "acd39c610e5ef16e88430705215546334e1ae64011a00c38ee9c61d7e1d31770",
+        "sha256_in_prefix": "acd39c610e5ef16e88430705215546334e1ae64011a00c38ee9c61d7e1d31770",
+        "size_in_bytes": 9152
+      },
+      {
+        "_path": "Library/lib/pkgconfig/py3cairo.pc",
+        "path_type": "hardlink",
+        "sha256": "3c38633fa23a88653b66f3d6259e2e82d5eb9e4a79f87def1648b63990db4f78",
+        "sha256_in_prefix": "3c38633fa23a88653b66f3d6259e2e82d5eb9e4a79f87def1648b63990db4f78",
+        "size_in_bytes": 231
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "3d358f76c63b9af9999351ae1ef9fac43eaf92e9678503501c655c39a4288c81",
+  "size": 70305,
+  "subdir": "win-64",
+  "timestamp": 1584670861730,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/pycairo-1.19.1-py36h4e8e208_3.tar.bz2",
+  "version": "1.19.1"
+}

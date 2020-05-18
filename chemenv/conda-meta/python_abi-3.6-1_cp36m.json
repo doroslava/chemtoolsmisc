@@ -1,0 +1,39 @@
+{
+  "build": "1_cp36m",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [
+    "pypy <0a0",
+    "python_abi * *_cp36m"
+  ],
+  "depends": [
+    "python 3.6.*"
+  ],
+  "extracted_package_dir": "C:\\Users\\dora\\Anaconda3\\pkgs\\python_abi-3.6-1_cp36m",
+  "features": "",
+  "files": [
+    ".nonadmin"
+  ],
+  "fn": "python_abi-3.6-1_cp36m.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "C:\\Users\\dora\\Anaconda3\\pkgs\\python_abi-3.6-1_cp36m",
+    "type": 1
+  },
+  "md5": "ab04861320c595149064323a65c03098",
+  "name": "python_abi",
+  "package_tarball_full_path": "C:\\Users\\dora\\Anaconda3\\pkgs\\python_abi-3.6-1_cp36m.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a513996603bb1de61b82e78fb24ac555e3039cd68b519d0f80d90fdfc6ebca0b",
+  "size": 3726,
+  "subdir": "win-64",
+  "timestamp": 1583344843675,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/python_abi-3.6-1_cp36m.tar.bz2",
+  "version": "3.6"
+}
