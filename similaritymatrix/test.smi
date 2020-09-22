@@ -1,0 +1,6 @@
+Smiles	Compound.Name
+CCOC(=O)c1c2c(sc1NC(=S)Nc3cccc(c3)OC)CCCC2	ethyl 2-{[(3-methoxyphenyl)carbamothioyl]amino}-4,5,6,7-tetrahydro-1-benzothiophene-3-carboxylate
+COC(=O)c1c2c(sc1NC(=O)NCCN3CCOCC3)CCC2	methyl 2-({[2-(morpholin-4-yl)ethyl]carbamoyl}amino)-4H,5H,6H-cyclopenta[b]thiophene-3-carboxylate
+COC(=O)c1c2c(sc1NC(=S)Nc3ccccc3)CCCC2	methyl 2-[(phenylcarbamothioyl)amino]-4,5,6,7-tetrahydro-1-benzothiophene-3-carboxylate
+CC(C)CCN1CCNC(=O)C1CC(=O)NCc2c3c([nH]n2)CCCCC3	N-({1H,4H,5H,6H,7H,8H-cyclohepta[c]pyrazol-3-yl}methyl)-2-[1-(3-methylbutyl)-3-oxopiperazin-2-yl]acetamide
+CNc1ccc(cc1n2cc(nc2)c3ccc(cc3)[N+](=O)[O-])[N+](=O)[O-]	N-methyl-4-nitro-2-[4-(4-nitrophenyl)-1H-imidazol-1-yl]aniline
